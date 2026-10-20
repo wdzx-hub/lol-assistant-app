@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="img-src 'self' https://raw.communitydragon.org; style-src 'self' 'unsafe-inline'; script-src 'self';" />
+  <title>LOL 助手</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="logo">LoL</span>
+      <h1>英雄联盟游戏助手</h1>
+    </div>
+    <div class="status">
+      <span id="conn-dot" class="dot off"></span>
+      <span id="conn-text">连接中…</span>
+      <span id="phase-tag" class="tag">—</span>
+      <label class="switch" title="游戏内悬浮提示">
+        <input type="checkbox" id="overlay-toggle" checked />
+        <span>悬浮提示</span>
+      </label>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="select">选人分析</button>
+    <button class="tab" data-tab="live">对局分析</button>
+    <button class="tab" data-tab="extend">扩展接口</button>
+  </nav>
+
+  <main>
+    <section id="tab-select" class="tab-panel active">
+      <div class="columns">
+        <div class="team">
+          <h2 class="team-title blue">我方</h2>
+          <div id="my-team" class="team-list"></div>
+        </div>
+        <div class="vs">VS</div>
+        <div class="team">
+          <h2 class="team-title red">对方</h2>
+          <div id="their-team" class="team-list"></div>
+        </div>
+      </div>
+      <p id="select-hint" class="hint"></p>
+    </section>
+
+    <section id="tab-live" class="tab-panel">
+      <div id="live-content" class="live-content"></div>
+    </section>
+
+    <section id="tab-extend" class="tab-panel">
+      <h2>已接入游戏（开放接口）</h2>
+      <p class="hint">新游戏通过实现 GameAdapter 接口并注册即可接入。</p>
+      <ul id="adapter-list" class="adapter-list"></ul>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

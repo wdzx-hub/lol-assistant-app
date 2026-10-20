@@ -1,0 +1,29 @@
+# 依赖
+node_modules/
+
+# 打包产物
+dist/
+build/
+
+# 打包缓存（electron / electron-builder）
+.electron-cache/
+.electron-builder-cache/
+
+# 运行时数据
+.user-data/
+
+# 敏感文件：LCU 凭证（含 riot 密码，严禁提交）
+.lcu_cred.json
+
+# 日志
+*.log
+
+# 调试 / 诊断临时脚本
+diag-*.js
+diagnose.js
+watch.js
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+*.swp

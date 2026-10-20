@@ -1,0 +1,30 @@
+html, body { background: transparent; margin: 0; padding: 0; }
+body { font-family: "Segoe UI", "Microsoft YaHei", system-ui, sans-serif; }
+
+#tip {
+  position: fixed;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(13, 17, 23, 0.85);
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  border-radius: 12px;
+  padding: 12px 16px;
+  color: #e6edf3;
+  max-width: 440px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
+  display: none;
+  pointer-events: none;
+}
+
+#tip .head {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 13px; margin-bottom: 8px;
+}
+#tip .head .time { color: #8b949e; }
+#tip .diffs { display: flex; gap: 16px; font-size: 14px; margin-bottom: 8px; }
+#tip .diffs .pos { color: #22c55e; }
+#tip .diffs .neg { color: #ef4444; }
+#tip .advice { font-size: 13px; line-height: 1.5; }
+#tip .advice .tf { border-left: 2px solid #3b82f6; padding-left: 8px; margin-bottom: 4px; }
+#tip .advice .bd { border-left: 2px solid #f59e0b; padding-left: 8px; }
